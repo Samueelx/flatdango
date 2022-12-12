@@ -4,4 +4,35 @@ body {
 
 .main-container {
     background: linear-gradient(180deg, #90E0EF, #CAF0F8);
+    display: flex;
+}
+.main-movie {
+    width: 70vw;
+    align-self: center;
+    justify-self: center;
+}
+
+#mainMovie {
+    height: 70vh;
+    border-radius: 0.5rem;
+}
+
+.movie-details{
+    margin: auto;
+    max-width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+p.details{
+    flex: 1;
+}
+
+.movies-menu {
+    max-width: 20vw;
+}
+.card-img-top {
+    max-height: 35vh;
+    
 }
