@@ -1,4 +1,4 @@
-const MOVIES_URL = "http://localhost:3000/films";
+const MOVIES_URL = "https://flatdango-pink.vercel.app/db.json";
 const mainContainer = document.querySelector(".main-container");
 
 const firstMovie = (film) => {
@@ -66,10 +66,10 @@ const createFilms = (film) => {
 
 /**Fetch the first movie */
 const fetchFirst = (MOVIES_URL) => {
-  fetch(`${MOVIES_URL}/1`)
+  fetch(`${MOVIES_URL}`)
     .then((response) => response.json())
-    .then((film) => {
-      firstMovie(film);
+    .then((data) => {
+      firstMovie(data.films[0]);
     });
 };
 
@@ -77,8 +77,8 @@ const fetchFirst = (MOVIES_URL) => {
 const fetchAll = (MOVIES_URL) => {
   fetch(MOVIES_URL)
     .then((response) => response.json())
-    .then((films) => {
-      films.forEach((film) => {
+    .then((data) => {
+      data.films.forEach((film) => {
         createFilms(film);
       });
     });
