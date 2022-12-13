@@ -40,7 +40,6 @@ const firstMovie = (film) => {
 
 /**Create and render the menu list of films */
 const createFilms = (film) => {
-  //   const menuDiv = document.querySelector("div.movies-menu");
   const ul = document.querySelector("#films");
 
   ul.insertAdjacentHTML(
@@ -79,8 +78,6 @@ const fetchAll = (MOVIES_URL) => {
   fetch(MOVIES_URL)
     .then((response) => response.json())
     .then((films) => {
-      // console.log(films);
-      //   createFilms(films);
       films.forEach((film) => {
         createFilms(film);
       });
