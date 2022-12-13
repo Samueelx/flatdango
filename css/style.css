@@ -28,6 +28,10 @@ body {
 p.details{
     flex: 1;
 }
+div.description {
+    margin: auto;
+    max-width: 50vw;
+}
 
 .movies-menu {
     max-width: 20vw;
