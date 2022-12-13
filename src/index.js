@@ -32,35 +32,37 @@ const firstMovie = (film) => {
   buyTicket.addEventListener("click", () => {
     const tickets = mainDiv.querySelector("p#tickets");
     if (availableTickets > 0) {
-      availableTickets -= 1;
+      --availableTickets;
       tickets.textContent = `Available tickets: ${availableTickets}`;
     } else buyTicket.textContent = "SOLD OUT!";
   });
 };
 
 /**Create and render the menu list of films */
-const createFilms = (films) => {
-  const menuDiv = document.querySelector("div.movies-menu");
+const createFilms = (film) => {
+  //   const menuDiv = document.querySelector("div.movies-menu");
   const ul = document.querySelector("#films");
 
-  films.forEach((film) => {
-    console.log("before li");
-    ul.insertAdjacentHTML(
-      "afterbegin",
-      `<li class="mt-2 mb-2 film item">
+  ul.insertAdjacentHTML(
+    "afterbegin",
+    `<li class="mt-2 mb-2 film item">
     <div class="card">
         <img src="${film.poster}" alt="" class="card-img-top img-fluid">
         <div class="card-body">
             <h4 class="card-title">${film.title}</h4>
-            <button type="button" class="btn btn-outline-dark">View Details</button>
+            <button type="button" class="btn btn-outline-dark" id ="detailsButton">View Details</button>
         </div>
     </div>
     </li>`
-    );
-    console.log("after li");
+  );
+
+  /**add event listener to view a movie's details */
+  const detailsButton = ul.querySelector("#detailsButton");
+  detailsButton.addEventListener("click", () => {
+    const mainDiv = mainContainer.querySelector('div.main-movie');
+    mainDiv.remove();
+    firstMovie(film);
   });
-  // menuDiv.appendChild(ul);
-  // mainContainer.appendChild(menuDiv);
 };
 
 /**Fetch the first movie */
@@ -78,10 +80,10 @@ const fetchAll = (MOVIES_URL) => {
     .then((response) => response.json())
     .then((films) => {
       // console.log(films);
-      createFilms(films);
-      // films.map((film) => {
-      //     createFilms(film);
-      // });
+      //   createFilms(films);
+      films.forEach((film) => {
+        createFilms(film);
+      });
     });
 };
 
