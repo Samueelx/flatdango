@@ -40,3 +40,7 @@ div.description {
     max-height: 35vh;
     
 }
+
+ul#films {
+    list-style-type: none;
+}
