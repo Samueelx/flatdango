@@ -8,7 +8,7 @@ body {
 }
 .main-movie {
     width: 70vw;
-    align-self: center;
+    /* align-self: center; */
     justify-self: center;
 }
 
