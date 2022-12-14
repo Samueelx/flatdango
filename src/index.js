@@ -45,8 +45,10 @@ const createFilms = (film) => {
   ul.insertAdjacentHTML(
     "afterbegin",
     `<li class="mt-2 mb-2 film item">
+    <div class="card">
           <h4 class="card-title">${film.title}</h4>
-          <button type="button" class="btn btn-outline-dark" id ="detailsButton">View Details</button>
+          <button type="button" class="btn btn-outline-light text-dark" id ="detailsButton">View Details</button>
+      </div>
     </li>`
   );
 

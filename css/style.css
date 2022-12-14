@@ -41,3 +41,6 @@ div.description {
 ul#films {
     list-style-type: none;
 }
+#detailsButton {
+    border: none;
+}
