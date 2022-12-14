@@ -10,15 +10,15 @@ const firstMovie = (film) => {
   let availableTickets = film.capacity - film.tickets_sold;
 
   mainDiv.innerHTML = `
-        <h3 class="pt-5 pb-3">${film.title}</h3>
+        <h3 class="mt-5 pt-5 pb-3">${film.title}</h3>
         <img src="${film.poster}" alt="Main Movie" class="img-fluid" id="mainMovie">
-        <div class="movie-details mt-3">
-                <p class="details" id="showtime">Showtime: ${film.showtime}</p>
-                <p class="details" id="runtime">Runtime: ${film.runtime} Mins</p>
-                <p class="details" id="tickets">Available tickets: ${availableTickets}</p>
+        <div class="movie-details mt-4">
+                <p class="details fs-3" id="showtime">Showtime: ${film.showtime}</p>
+                <p class="details fs-3" id="runtime">Runtime: ${film.runtime} Mins</p>
+                <p class="details fs-3" id="tickets">Available tickets: ${availableTickets}</p>
         </div>
         <div class="description mt-3">
-            <p id="description">
+            <p id="description" class="fs-5">
                 ${film.description}
             </p>
             <button type="button" class="btn btn-outline-dark mt-3 mb-5">Buy Tickets</button>
@@ -45,13 +45,8 @@ const createFilms = (film) => {
   ul.insertAdjacentHTML(
     "afterbegin",
     `<li class="mt-2 mb-2 film item">
-    <div class="card">
-        <img src="${film.poster}" alt="" class="card-img-top img-fluid">
-        <div class="card-body">
-            <h4 class="card-title">${film.title}</h4>
-            <button type="button" class="btn btn-outline-dark" id ="detailsButton">View Details</button>
-        </div>
-    </div>
+          <h4 class="card-title">${film.title}</h4>
+          <button type="button" class="btn btn-outline-dark" id ="detailsButton">View Details</button>
     </li>`
   );
 

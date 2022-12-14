@@ -36,10 +36,6 @@ div.description {
 .movies-menu {
     max-width: 20vw;
 }
-.card-img-top {
-    max-height: 35vh;
-    
-}
 
 ul#films {
     list-style-type: none;
