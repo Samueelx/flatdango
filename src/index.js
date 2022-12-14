@@ -10,7 +10,7 @@ const firstMovie = (film) => {
   let availableTickets = film.capacity - film.tickets_sold;
 
   mainDiv.innerHTML = `
-        <h3 class="mt-5 pt-5 pb-3">${film.title}</h3>
+        <h3 class="pt-5 pb-3">${film.title}</h3>
         <img src="${film.poster}" alt="Main Movie" class="img-fluid" id="mainMovie">
         <div class="movie-details mt-4">
                 <p class="details fs-3" id="showtime">Showtime: ${film.showtime}</p>
