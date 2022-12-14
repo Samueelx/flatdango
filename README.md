@@ -41,6 +41,9 @@ To test the functionality of this web application, from this repo's root:
 1. Run the json server using the command shown above.
 2. Open the `index.html` file from your preferred browser.
 
+### Alternatively
+Click on the link in the `About` section of this repository.
+
 ## Screenshots
 This is how the web application looks like: 
 
